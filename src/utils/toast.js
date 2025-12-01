@@ -1,4 +1,3 @@
-// Simple toast notification system
 let toastCallback = null;
 
 export const registerToast = (callback) => {

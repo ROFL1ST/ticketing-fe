@@ -27,6 +27,7 @@ export const decodeToken = () => {
     }
     return decoded;
   } catch (error) {
+    console.error("Failed to decode token:", error);
     removeToken();
     return null;
   }
