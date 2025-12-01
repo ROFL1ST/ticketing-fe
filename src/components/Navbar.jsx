@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const { isLoggedIn, role, logout, checkAuth } = useAuth();
@@ -13,13 +13,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-bold text-primary-600">
-            {appName || 'Ticketing System'}
+            {appName || "Ticketing System"}
           </Link>
 
           <div className="flex items-center gap-4">
             {isLoggedIn ? (
               <>
-                {role === 'admin' ? (
+                {role === "admin" ? (
                   <Link
                     to="/admin/tickets"
                     className="text-gray-700 hover:text-primary-600 transition-colors"
@@ -30,13 +30,13 @@ const Navbar = () => {
                   <>
                     <Link
                       to="/tickets"
-                      className="text-gray-700 hover:text-primary-600 transition-colors"
+                      className="text-gray-700 hover:text-blue-600 transition-colors"
                     >
                       My Tickets
                     </Link>
                     <Link
                       to="/tickets/create"
-                      className="text-gray-700 hover:text-primary-600 transition-colors"
+                      className="text-gray-700 hover:text-blue-600 transition-colors"
                     >
                       Create Ticket
                     </Link>
@@ -44,14 +44,17 @@ const Navbar = () => {
                 )}
                 <button
                   onClick={logout}
-                  className="btn-secondary"
+                  className="text-gray-700 cursor-pointer hover:text-red-600 transition-colors"
                 >
                   Logout
                 </button>
               </>
             ) : (
               <>
-                <Link to="/login" className="text-gray-700 hover:text-primary-600 transition-colors">
+                <Link
+                  to="/login"
+                  className="text-gray-700 hover:text-primary-600 transition-colors"
+                >
                   Login
                 </Link>
                 <Link to="/register" className="btn-primary">

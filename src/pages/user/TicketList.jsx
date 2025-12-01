@@ -36,7 +36,10 @@ const TicketList = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">My Tickets</h1>
-        <Link to="/tickets/create" className="btn-primary">
+        <Link
+          to="/tickets/create"
+          className="px-4 py-2 rounded-lg text-sm font-medium transition bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800"
+        >
           Create New Ticket
         </Link>
       </div>
