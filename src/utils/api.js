@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getToken, removeToken } from "./auth";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
   baseURL: BASE_URL,

@@ -8,10 +8,6 @@ const TicketList = () => {
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchTickets();
-  }, []);
-
   const fetchTickets = async () => {
     try {
       const response = await userTicketAPI.getMyTickets();
@@ -23,7 +19,9 @@ const TicketList = () => {
       setLoading(false);
     }
   };
-
+  useEffect(() => {
+    fetchTickets();
+  }, []);
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">

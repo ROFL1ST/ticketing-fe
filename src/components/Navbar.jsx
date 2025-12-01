@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const Navbar = () => {
   const { isLoggedIn, role, logout, checkAuth } = useAuth();
-
+  const appName = import.meta.env.VITE_APP_NAME;
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-bold text-primary-600">
-            Ticketing System
+            {appName || 'Ticketing System'}
           </Link>
 
           <div className="flex items-center gap-4">

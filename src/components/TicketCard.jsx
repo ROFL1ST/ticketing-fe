@@ -25,7 +25,7 @@ const TicketCard = ({ ticket, isAdmin = false }) => {
   return (
     <Link
       to={linkTo}
-      className="card hover:shadow-lg transition-shadow px-3 py-4 rounded-xl"
+      className="hover:shadow-lg shadow-sm transition-shadow px-3 py-4 rounded-xl"
     >
       <div className="flex justify-between items-start mb-2">
         <h3 className="text-lg font-semibold text-gray-800">{ticket.title}</h3>
