@@ -16,7 +16,7 @@ const Toast = () => {
   }, []);
 
   const getToastStyles = (type) => {
-    const baseStyles = 'p-4 rounded-lg shadow-lg text-white min-w-[300px]';
+    const baseStyles = 'p-4 rounded-lg shadow-lg text-white min-w-[300px] transition-opacity duration-300';
     const typeStyles = {
       success: 'bg-green-500',
       error: 'bg-red-500',

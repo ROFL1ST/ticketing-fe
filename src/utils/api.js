@@ -47,6 +47,8 @@ export const userTicketAPI = {
   createTicket: (ticketData) => api.post("/user/tickets", ticketData),
   addComment: (ticketId, message) =>
     api.post(`/user/tickets/${ticketId}/comment`, { message }),
+  deleteComment: (commentId) =>
+    api.delete(`/user/tickets/comment/${commentId}`),
 };
 
 // Admin ticket endpoints

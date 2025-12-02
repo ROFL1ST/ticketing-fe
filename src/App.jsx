@@ -1,31 +1,35 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Toast from './components/Toast';
-import ProtectedRoute from './components/ProtectedRoute';
-import AdminRoute from './components/AdminRoute';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Toast from "./components/Toast";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
 
-// Auth pages
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-// User pages
-import TicketList from './pages/user/TicketList';
-import TicketDetail from './pages/user/TicketDetail';
-import CreateTicket from './pages/user/CreateTicket';
+import TicketList from "./pages/user/TicketList";
+import TicketDetail from "./pages/user/TicketDetail";
+import CreateTicket from "./pages/user/CreateTicket";
 
-// Admin pages
-import AdminTicketList from './pages/admin/AdminTicketList';
-import AdminTicketDetail from './pages/admin/AdminTicketDetail';
+import AdminTicketList from "./pages/admin/AdminTicketList";
+import AdminTicketDetail from "./pages/admin/AdminTicketDetail";
 
-import { isAuthenticated, getUserRole } from './utils/auth';
+import { isAuthenticated, getUserRole } from "./utils/auth";
 
 const HomePage = () => {
   if (!isAuthenticated()) {
     return <Navigate to="/login" replace />;
   }
-  
+
   const role = getUserRole();
-  return <Navigate to={role === 'admin' ? '/admin/tickets' : '/tickets'} replace />;
+  return (
+    <Navigate to={role === "admin" ? "/admin/tickets" : "/tickets"} replace />
+  );
 };
 
 function App() {
@@ -34,16 +38,13 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Toast />
-        
+
         <Routes>
-          {/* Home redirect */}
           <Route path="/" element={<HomePage />} />
 
-          {/* Auth routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          {/* User routes */}
           <Route
             path="/tickets"
             element={
@@ -69,7 +70,6 @@ function App() {
             }
           />
 
-          {/* Admin routes */}
           <Route
             path="/admin/tickets"
             element={
@@ -87,7 +87,6 @@ function App() {
             }
           />
 
-          {/* 404 route */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

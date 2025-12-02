@@ -10,7 +10,7 @@ const TicketDetail = () => {
   const [loading, setLoading] = useState(true);
   const [commentText, setCommentText] = useState("");
   const [submitting, setSubmitting] = useState(false);
-
+  const [deletingComment, setDeletingComment] = useState(false);
   useEffect(() => {
     fetchTicket();
   }, [id]);
@@ -45,6 +45,20 @@ const TicketDetail = () => {
       toast.error("Failed to add comment");
     } finally {
       setSubmitting(false);
+    }
+  };
+
+  const handleDeleteComment = async (commentId) => {
+    try {
+      console.log("Deleting comment:", commentId);
+      setDeletingComment(true);
+      await userTicketAPI.deleteComment(commentId);
+      toast.success("Comment deleted successfully");
+      fetchTicket();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setDeletingComment(false);
     }
   };
 
@@ -118,11 +132,23 @@ const TicketDetail = () => {
           {ticket.comments && ticket.comments.length > 0 && (
             <div className="space-y-4 mb-6">
               {ticket.comments.map((comment) => (
-                <div key={comment.id} className="bg-gray-50 rounded-lg p-4">
-                  <p className="text-gray-800">{comment.message}</p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    User #{comment.user_id}
-                  </p>
+                <div
+                  key={comment.id}
+                  className="bg-gray-50 rounded-lg p-4 flex justify-between items-start"
+                >
+                  <div className="flex flex-col">
+                    <p className="text-gray-800">{comment.message}</p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      User #{comment.user_id}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => handleDeleteComment(comment.id)}
+                    disabled={deletingComment}
+                    className="text-red-600 hover:underline text-sm disabled:opacity-50 cursor-pointer"
+                  >
+                    {deletingComment ? "Deleting..." : "Delete"}
+                  </button>
                 </div>
               ))}
             </div>
