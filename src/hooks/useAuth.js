@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   isAuthenticated,
   getUserRole,
@@ -28,10 +28,6 @@ export const useAuth = () => {
     setRole(null);
     navigate("/login");
   };
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
 
   return {
     isLoggedIn,

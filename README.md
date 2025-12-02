@@ -427,8 +427,7 @@ Contributions are welcome! Please follow these steps:
 
 ## 🔗 Related Repositories
 
-- **Backend API:** [ticketing-backend](https://github.com/yourusername/ticketing-backend)
-- **Documentation:** [ticketing-docs](https://github.com/yourusername/ticketing-docs)
+- **Backend API:** [ticketing-backend](https://github.com/ROFL1ST/ticketing-go)
 
 ---
 
@@ -442,9 +441,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Muhamad Danendra Prawiraamijoyo**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@ROFL1ST](https://github.com/ROFL1ST)
+- Email: danendrapr55@gmail.com
+- LinkedIn: [Danendra Pr](https://linkedin.com/in/danendra-prawiraamijoyo/)
 
 ---
 
@@ -455,16 +454,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
 - [React Router](https://reactrouter.com/) - Declarative routing for React
 - [Axios](https://axios-http.com/) - Promise based HTTP client
-
----
-
-## 📞 Support
-
-If you have any questions or need help, please:
-
-1. Check the [Issues](https://github.com/yourusername/ticketing-frontend/issues) page
-2. Create a new issue if your problem isn't already listed
-3. Join our [Discussions](https://github.com/yourusername/ticketing-frontend/discussions)
 
 ---
 
