@@ -100,6 +100,8 @@ Before you begin, ensure you have:
    Edit `.env` and update with your backend URL:
    ```env
    VITE_API_URL=http://localhost:8080/api
+   VITE_APP_NAME=Ticketing System
+
    ```
 
 4. **Start development server**
