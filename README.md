@@ -83,8 +83,8 @@ Before you begin, ensure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ticketing-frontend.git
-   cd ticketing-frontend
+   git clone https://github.com/ROFL1ST/ticketing-fe
+   cd ticketing-fe
    ```
 
 2. **Install dependencies**
