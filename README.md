@@ -151,22 +151,22 @@ netlify deploy --prod --dir=dist
 ## 📁 Project Structure
 
 ```
-ticketing-frontend/
+ticketing-fe/
 │
-├── public/                 # Static assets
+├── public/                 
 │
 ├── src/
-│   ├── components/         # Reusable components
-│   │   ├── AdminRoute.jsx       # Admin-only route wrapper
-│   │   ├── Navbar.jsx           # Navigation bar
-│   │   ├── ProtectedRoute.jsx   # Auth-protected route wrapper
-│   │   ├── TicketCard.jsx       # Ticket display card
-│   │   └── Toast.jsx            # Notification system
+│   ├── components/        
+│   │   ├── AdminRoute.jsx       
+│   │   ├── Navbar.jsx           
+│   │   ├── ProtectedRoute.jsx   
+│   │   ├── TicketCard.jsx       
+│   │   └── Toast.jsx           
 │   │
-│   ├── hooks/              # Custom React hooks
-│   │   └── useAuth.js           # Authentication hook
+│   ├── hooks/             
+│   │   └── useAuth.js          
 │   │
-│   ├── pages/              # Page components
+│   ├── pages/            
 │   │   ├── admin/
 │   │   │   ├── AdminTicketDetail.jsx
 │   │   │   └── AdminTicketList.jsx
@@ -177,23 +177,23 @@ ticketing-frontend/
 │   │   ├── Login.jsx
 │   │   └── Register.jsx
 │   │
-│   ├── utils/              # Utility functions
-│   │   ├── api.js               # Axios instance & API calls
-│   │   ├── auth.js              # Auth helper functions
-│   │   └── toast.js             # Toast notification helpers
+│   ├── utils/             
+│   │   ├── api.js             
+│   │   ├── auth.js              
+│   │   └── toast.js             
 │   │
-│   ├── App.jsx             # Main app component with routes
-│   ├── main.jsx            # Application entry point
-│   └── index.css           # Global styles & Tailwind
+│   ├── App.jsx             
+│   ├── main.jsx            
+│   └── index.css           
 │
-├── .env.example            # Environment variables template
-├── .gitignore              # Git ignore rules
-├── index.html              # HTML entry point
-├── package.json            # Dependencies and scripts
-├── postcss.config.js       # PostCSS configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── vite.config.js          # Vite configuration
-└── README.md               # This file
+├── .env.example            
+├── .gitignore               
+├── index.html              
+├── package.json           
+├── postcss.config.js       
+├── tailwind.config.js      
+├── vite.config.js          
+└── README.md               
 ```
 
 ---
