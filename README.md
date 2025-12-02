@@ -77,7 +77,7 @@ A modern, responsive ticketing system frontend with JWT authentication and role-
 Before you begin, ensure you have:
 - **Node.js** 18.0 or higher
 - **npm** or **yarn**
-- Backend API running ([Backend Repository](https://github.com/yourusername/ticketing-backend))
+- Backend API running ([Backend Repository](https://github.com/ROFL1ST/ticketing-go))
 
 ### Installation
 
